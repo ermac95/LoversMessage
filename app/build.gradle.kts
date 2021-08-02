@@ -4,6 +4,7 @@ plugins {
     kotlin("plugin.serialization")
     kotlin("kapt")
     id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-android")
 }
 
 android {
@@ -14,6 +15,7 @@ android {
         applicationId = "com.mycodeflow.loversmessage"
         minSdkVersion(24)
         targetSdkVersion(30)
+        multiDexEnabled = true
         versionCode = 1
         versionName = "1.0"
 
@@ -61,6 +63,12 @@ dependencies {
     // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:${rootProject.extra["navigationVersion"]}")
     implementation("androidx.navigation:navigation-ui-ktx:${rootProject.extra["navigationVersion"]}")
+
+    //ViewPager
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+    //RoundedImageView
+    implementation("com.makeramen:roundedimageview:2.3.0")
 
     // Lifecycle
     val lifecycleVersion = "2.3.0"

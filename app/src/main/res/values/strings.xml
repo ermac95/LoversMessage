@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">LoversMessage</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lovers_message">Lovers message</string>
+    <string name="home_screen">Home Screen</string>
+    <string name="message_screen">Message Screen</string>
+    <string name="audio_screen">Audio Screen</string>
+    <string name="photo_screen">Photo Screen</string>
+    <string name="video_screen">Video Screen</string>
+    <string name="new_message_header">Create a message for your lover</string>
+    <string name="love_card_number">Love card # %1$d</string>
+    <string name="choose_a_card">Choose a card</string>
+    <string name="write_a_message">Write a message</string>
+    <string name="btn_send_msg">Send</string>
+    <string name="msg_hint">Type your message here</string>
 </resources>

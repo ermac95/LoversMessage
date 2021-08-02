@@ -2,6 +2,7 @@
 buildscript {
     val kotlinVersion by extra("1.4.31")
     val navigationVersion by extra("2.3.4")
+
     repositories {
         mavenCentral()
         google()

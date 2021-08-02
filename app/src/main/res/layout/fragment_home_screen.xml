@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen_main"
+    tools:context=".presentation.ui.HomeScreen">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lovers_message"
+        android:textSize="44sp"
+        android:textColor="@color/pink"
+        android:fontFamily="@font/frunch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"/>
+
+    <ImageView
+        android:id="@+id/message_icon"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/message_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="190dp"/>
+
+    <ImageView
+        android:id="@+id/audio_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="44dp"
+        android:src="@drawable/audio_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/photo_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/photo_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="190dp"/>
+
+    <ImageView
+        android:id="@+id/video_icon"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/video_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="190dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
