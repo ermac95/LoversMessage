@@ -48,17 +48,17 @@ dependencies {
     // UI
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("com.google.android.material:material:1.4.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
 
     // Activity KTX
-    implementation("androidx.activity:activity-ktx:1.3.0")
+    implementation("androidx.activity:activity-ktx:1.3.1")
 
     // Fragment KTX
     implementation("androidx.fragment:fragment-ktx:1.3.6")
 
     // Serialization
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
 
     // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:${rootProject.extra["navigationVersion"]}")
@@ -69,6 +69,8 @@ dependencies {
 
     //RoundedImageView
     implementation("com.makeramen:roundedimageview:2.3.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:${rootProject.extra["kotlin_version"]}")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
 
     // Lifecycle
     val lifecycleVersion = "2.3.0"
@@ -88,6 +90,12 @@ dependencies {
 
     // Image downloading
     implementation("io.coil-kt:coil:1.1.1")
+
+    //Networking
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.8.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.8.0")
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
 
     // DB
     val roomVersion = "2.2.6"

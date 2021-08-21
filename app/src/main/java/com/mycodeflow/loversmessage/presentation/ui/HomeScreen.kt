@@ -8,6 +8,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.mycodeflow.loversmessage.R
 import com.mycodeflow.loversmessage.databinding.FragmentHomeScreenBinding
 
+
 class HomeScreen : Fragment(R.layout.fragment_home_screen) {
 
     private val vb by viewBinding(FragmentHomeScreenBinding::bind)
@@ -34,10 +35,11 @@ class HomeScreen : Fragment(R.layout.fragment_home_screen) {
         vb.videoIcon.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.actionHomeToVideo)
         }
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance() = HomeScreen()
+        vb.btnRegister.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.actionToRegister)
+        }
+        vb.btnAddLover.setOnClickListener {
+            //Navigate to add Lover Screen
+        }
     }
 }

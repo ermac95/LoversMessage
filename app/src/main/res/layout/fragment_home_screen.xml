@@ -9,6 +9,7 @@
     tools:context=".presentation.ui.HomeScreen">
 
     <TextView
+        android:id="@+id/main_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lovers_message"
@@ -19,6 +20,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="50dp"/>
+
+    <ImageView
+        android:id="@+id/btn_add_lover"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_add_user"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_header"/>
 
     <ImageView
         android:id="@+id/message_icon"
@@ -59,6 +70,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="190dp"/>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="register"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

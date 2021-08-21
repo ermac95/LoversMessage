@@ -22,6 +22,9 @@
         <action
             android:id="@+id/actionHomeToVideo"
             app:destination="@id/videoScreen" />
+        <action
+            android:id="@+id/actionToRegister"
+            app:destination="@id/registerScreen" />
     </fragment>
 
     <fragment
@@ -68,7 +71,25 @@
     </fragment>
     <fragment
         android:id="@+id/newMessageScreen"
-        android:name="com.mycodeflow.loversmessage.presentation.ui.NewMessageScreen"
+        android:name="com.mycodeflow.loversmessage.presentation.ui.NewMessageFirstPage"
         android:label="fragment_new_message_screen"
-        tools:layout="@layout/fragment_new_message_screen" />
+        tools:layout="@layout/fragment_new_message_first_page" >
+        <action
+            android:id="@+id/actionNewMessageSecondScreen"
+            app:destination="@id/newMessageSecondPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/newMessageSecondPage"
+        android:name="com.mycodeflow.loversmessage.presentation.ui.NewMessageSecondPage"
+        android:label="fragment_new_message_second_page"
+        tools:layout="@layout/fragment_new_message_second_page" >
+        <action
+            android:id="@+id/actionSendMessageToHomeScreen"
+            app:destination="@id/homeScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerScreen"
+        android:name="com.mycodeflow.loversmessage.presentation.ui.authorization.RegisterScreen"
+        android:label="@string/register_screen"
+        tools:layout="@layout/fragment_register_screen" />
 </navigation>

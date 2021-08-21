@@ -1,23 +1,46 @@
 package com.mycodeflow.loversmessage.presentation.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.mycodeflow.loversmessage.domain.model.LoveCardItem
+import androidx.lifecycle.viewModelScope
+import com.mycodeflow.loversmessage.domain.model.LoveCard
+import com.mycodeflow.loversmessage.domain.model.LoveCardTemplate
 import com.mycodeflow.loversmessage.domain.repositories.MessageRepository
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
+import java.lang.Exception
+import javax.inject.Inject
 
-class MessageViewModel(
-        val messageRepo: MessageRepository
+class MessageViewModel @Inject constructor(
+        val messageRepository: MessageRepository
 ): ViewModel() {
 
-    private val _messages = MutableStateFlow<List<LoveCardItem>>(emptyList())
-    val messages: StateFlow<List<LoveCardItem>> get() = _messages
+    private val coroutineExceptionHandler = CoroutineExceptionHandler { _, throwable ->
+        Log.e(this::class.java.simpleName, "CoroutineExceptionHandler:$throwable")
+    }
 
-    fun createNewMessage(message: LoveCardItem){
-        //repo.createNewMessage(message)
+    private val _messages = MutableStateFlow<List<LoveCardTemplate>>(emptyList())
+    val messages: StateFlow<List<LoveCardTemplate>> get() = _messages
+
+    fun setImageAndMessage(imageIndex: Int, message: String){
+        messageRepository.setImageIndexAndMessage(imageIndex, message)
+    }
+
+    fun setDateAndTime(date: String, time: String){
+        messageRepository.setDateAndTime(date, time)
     }
 
     fun getCurrentMessages(){
-        //_messages.value = repo.getAllMessages()
+        var loveCards: List<LoveCard> = emptyList()
+        viewModelScope.launch(Dispatchers.IO + coroutineExceptionHandler ) {
+            try {
+                loveCards = messageRepository.getAllLoveCards()
+            } catch (e: Exception){
+                Log.d("myLogs", "Exception occurred during GetAllLoveCards api call is ${e.message}")
+            }
+        }
     }
 }

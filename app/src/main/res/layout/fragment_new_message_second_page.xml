@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen_main"
+    tools:context=".presentation.ui.NewMessageSecondPage">
+
+    <ImageView
+        android:id="@+id/new_msg_btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/ic_arrow_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_date_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_msg_date_time_header"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/new_msg_btn_back"
+        app:layout_constraintTop_toBottomOf="@id/new_msg_btn_back"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <TextView
+        android:id="@+id/header_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_msg_pick_date_header"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@id/header_date_selector"
+        app:layout_constraintTop_toBottomOf="@id/header_date_selector"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <Button
+        android:id="@+id/btn_pick_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_btn_all"
+        android:text="@string/btn_pick_date"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/header_date"
+        app:layout_constraintTop_toBottomOf="@id/header_date"
+        />
+
+    <TextView
+        android:id="@+id/field_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/field_select_date"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="35dp"
+        app:layout_constraintStart_toEndOf="@id/btn_pick_date"
+        app:layout_constraintTop_toTopOf="@id/btn_pick_date"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <TextView
+        android:id="@+id/header_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_msg_pick_time_header"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@id/btn_pick_date"
+        app:layout_constraintTop_toBottomOf="@id/btn_pick_date"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <Button
+        android:id="@+id/btn_pick_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn_all"
+        android:text="@string/btn_pick_time"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/header_time"
+        app:layout_constraintTop_toBottomOf="@id/header_time"
+        />
+
+    <TextView
+        android:id="@+id/field_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/field_select_time"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="35dp"
+        app:layout_constraintStart_toEndOf="@id/btn_pick_time"
+        app:layout_constraintTop_toTopOf="@id/btn_pick_time"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <Button
+        android:id="@+id/btn_send_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bg_btn_all"
+        android:text="@string/btn_send_msg"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

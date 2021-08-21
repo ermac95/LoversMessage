@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_screen_main"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.ui.NewMessageScreen">
+    tools:context=".presentation.ui.NewMessageFirstPage">
 
     <TextView
         android:id="@+id/new_msg_header"
@@ -19,7 +19,8 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/frunch"
         android:textSize="22sp"
-        android:textColor="@color/pink"/>
+        android:textColor="@color/pink"
+        />
 
     <TextView
         android:id="@+id/card_bg_header"
@@ -31,18 +32,20 @@
         app:layout_constraintTop_toBottomOf="@id/new_msg_header"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        />
 
     <!--Carousel for card background -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/cards_slider"
         android:layout_width="match_parent"
-        android:layout_height="260dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         android:paddingBottom="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_bg_header" />
+        app:layout_constraintTop_toBottomOf="@id/card_bg_header"
+        />
 
     <TextView
         android:id="@+id/card_text"
@@ -54,9 +57,11 @@
         app:layout_constraintTop_toBottomOf="@id/cards_slider"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        />
 
     <EditText
+        android:id="@+id/msg_text_field"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_margin="10dp"
@@ -65,10 +70,20 @@
         android:hint="@string/msg_hint"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card_text"
-        android:autofillHints="Type you message here" />
+        android:autofillHints="Type you message here"
+        />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/msg_text_field"
+        android:layout_marginTop="16dp"/>
 
     <Button
-        android:id="@+id/btn_send_msg"
+        android:id="@+id/btn_new_msg_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,15 +91,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:text="@string/btn_send_msg"
+        android:text="@string/btn_new_msg_next"
         android:textSize="16sp"
         android:textAllCaps="true"
         android:textStyle="bold"
         android:background="@drawable/bg_btn_all"
-        android:layout_marginBottom="20dp"/>
-
-    <!-- EditText field for card text -->
-
-    <!-- send button for sending a card -->
+        android:layout_marginBottom="20dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
