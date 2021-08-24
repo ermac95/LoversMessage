@@ -1,6 +1,7 @@
 package com.mycodeflow.loversmessage.di
 
 import android.content.Context
+import com.mycodeflow.loversmessage.presentation.ui.AddLoverScreen
 import com.mycodeflow.loversmessage.presentation.ui.MessageScreen
 import com.mycodeflow.loversmessage.presentation.ui.NewMessageFirstPage
 import com.mycodeflow.loversmessage.presentation.ui.NewMessageSecondPage
@@ -25,4 +26,6 @@ interface AppComponent {
     fun inject(frag: RegisterScreen)
 
     fun inject(frag: MessageScreen)
+
+    fun inject(frag: AddLoverScreen)
 }

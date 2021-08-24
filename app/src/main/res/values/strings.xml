@@ -30,4 +30,6 @@
     <string name="btn_user_register">Register</string>
     <string name="register_account_hint">Already have an account?</string>
     <string name="register_screen">Register Screen</string>
+    <string name="add_to_loverslist">Add Lover</string>
+    <string name="user_not_found_in_db_error">User with such name doesn\'t exist</string>
 </resources>

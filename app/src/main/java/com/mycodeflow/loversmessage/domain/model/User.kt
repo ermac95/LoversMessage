@@ -11,6 +11,6 @@ data class User(
     val email: String,
     val hashPassword: String,
     val userName: String,
-    val loversList: MutableList<User>?,
-    val loveCards: MutableList<LoveCard>?
+    val loversList: MutableList<User>? = mutableListOf(),
+    val loveCards: MutableList<LoveCard>? = mutableListOf()
 )

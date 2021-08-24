@@ -25,6 +25,9 @@
         <action
             android:id="@+id/actionToRegister"
             app:destination="@id/registerScreen" />
+        <action
+            android:id="@+id/actionToAddLover"
+            app:destination="@id/addLoverScreen" />
     </fragment>
 
     <fragment
@@ -92,4 +95,9 @@
         android:name="com.mycodeflow.loversmessage.presentation.ui.authorization.RegisterScreen"
         android:label="@string/register_screen"
         tools:layout="@layout/fragment_register_screen" />
+    <fragment
+        android:id="@+id/addLoverScreen"
+        android:name="com.mycodeflow.loversmessage.presentation.ui.AddLoverScreen"
+        android:label="fragment_add_lover_screen"
+        tools:layout="@layout/fragment_add_lover_screen" />
 </navigation>

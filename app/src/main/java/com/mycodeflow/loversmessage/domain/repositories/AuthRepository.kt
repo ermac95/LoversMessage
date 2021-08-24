@@ -3,7 +3,6 @@ package com.mycodeflow.loversmessage.domain.repositories
 import android.util.Log
 import com.mycodeflow.loversmessage.data.api.LoveMessageApi
 import com.mycodeflow.loversmessage.data.database.UserDao
-import com.mycodeflow.loversmessage.data.database.UserDataBase
 import com.mycodeflow.loversmessage.domain.model.LoginRequest
 import com.mycodeflow.loversmessage.domain.model.RegisterRequest
 import com.mycodeflow.loversmessage.domain.model.SimpleResponse
@@ -26,6 +25,8 @@ class AuthRepository @Inject constructor(
     override suspend fun registerUser(registerRequest: RegisterRequest): SimpleResponse{
         val userResponse = networkApi.registerUser(registerRequest)
         //saving token to SharedPreferences
+        //sharedPrefs.add("token", userResponse.authToken)
+        //sharedPrefs.add("currentUser", registerRequest.email)
         saveUserToDatabase(registerRequest)
         return userResponse
     }

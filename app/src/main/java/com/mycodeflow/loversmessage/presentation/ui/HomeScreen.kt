@@ -39,7 +39,7 @@ class HomeScreen : Fragment(R.layout.fragment_home_screen) {
             Navigation.findNavController(it).navigate(R.id.actionToRegister)
         }
         vb.btnAddLover.setOnClickListener {
-            //Navigate to add Lover Screen
+            Navigation.findNavController(it).navigate(R.id.actionToAddLover)
         }
     }
 }
