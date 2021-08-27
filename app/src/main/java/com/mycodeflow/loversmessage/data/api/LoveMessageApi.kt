@@ -1,6 +1,6 @@
 package com.mycodeflow.loversmessage.data.api
 
-import com.mycodeflow.loversmessage.data.dto.UserResponse
+import com.mycodeflow.loversmessage.data.entities.UserResponse
 import com.mycodeflow.loversmessage.domain.model.LoginRequest
 import com.mycodeflow.loversmessage.domain.model.LoveCard
 import com.mycodeflow.loversmessage.domain.model.RegisterRequest

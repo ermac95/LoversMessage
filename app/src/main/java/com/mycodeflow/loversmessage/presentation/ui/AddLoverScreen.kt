@@ -27,7 +27,7 @@ class AddLoverScreen : Fragment(R.layout.fragment_add_lover_screen) {
     lateinit var viewModelFactory: AppViewModelFactory
     private lateinit var userViewModel: UserViewModel
 
-    lateinit var potentialFriend: User
+    var potentialFriend: User? = null
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -53,6 +53,7 @@ class AddLoverScreen : Fragment(R.layout.fragment_add_lover_screen) {
         lifecycleScope.launchWhenResumed {
             userViewModel.userData.collectLatest { user ->
                 Log.d("myLogs", "Current userData value is $user")
+                potentialFriend = user
                 vb.loversName.text = user?.userName
             }
         }
@@ -89,7 +90,7 @@ class AddLoverScreen : Fragment(R.layout.fragment_add_lover_screen) {
             popup.setOnMenuItemClickListener { menuItem->
                 when(menuItem.itemId){
                     R.id.add_lover -> {
-                        userViewModel.sendInvitation(potentialFriend.userName)
+                        userViewModel.sendInvitation(potentialFriend?.userName)
                         false
                     }
                     else -> return@setOnMenuItemClickListener false
@@ -105,7 +106,7 @@ class AddLoverScreen : Fragment(R.layout.fragment_add_lover_screen) {
     }
 
     private fun changeErrorStatus(error: String) {
-        if (error.isNullOrEmpty()){
+        if (error.isEmpty()){
             vb.errorMessage.visibility = View.GONE
         } else {
             vb.errorMessage.visibility = View.VISIBLE
@@ -113,3 +114,4 @@ class AddLoverScreen : Fragment(R.layout.fragment_add_lover_screen) {
         }
     }
 }
+

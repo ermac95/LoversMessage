@@ -53,12 +53,14 @@ class UserViewModel @Inject constructor(
         }
     }
 
+    fun sendInvitation(userName: String?) {
+        viewModelScope.launch(Dispatchers.IO + exceptionHandler){
+            userRepository.sendInvitation(userName)
+        }
+    }
+
     private fun onError(message: String) {
         _errorMessage.value = message
         _loading.value = false
-    }
-
-    fun sendInvitation(userName: String?) {
-
     }
 }

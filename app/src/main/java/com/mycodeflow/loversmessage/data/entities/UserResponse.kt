@@ -1,4 +1,4 @@
-package com.mycodeflow.loversmessage.data.dto
+package com.mycodeflow.loversmessage.data.entities
 
 import kotlinx.serialization.Serializable
 
